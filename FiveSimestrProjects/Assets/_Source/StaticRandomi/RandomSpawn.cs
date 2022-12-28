@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SOs;
 
-public class RandomSpawn : MonoBehaviour
+namespace StatRandom
 {
-    // Start is called before the first frame update
-    void Start()
+    public static class RandomSpawn 
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public static void RSpawn(ref List<PancakeSO> pancakes)
+        {
+            for (int i = 0; i < pancakes.Count; i++)
+            {
+                int rnd = Random.Range(0, pancakes.Count);
+                PancakeSO pancake = pancakes[i];
+                pancakes[i] = pancakes[rnd];
+                pancakes[rnd] = pancake;
+            }
+        }
     }
 }
+

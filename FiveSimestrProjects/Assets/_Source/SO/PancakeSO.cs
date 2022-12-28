@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PancakeSO : MonoBehaviour
+namespace SOs
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName = "PancakeSO", menuName = "ScriptableObjects/PancakeSO", order = 1)]
+    public class PancakeSO : ScriptableObject
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public GameObject PancakePref;
+        public int ScoreCost;
     }
 }
+

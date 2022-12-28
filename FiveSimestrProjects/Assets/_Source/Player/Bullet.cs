@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SOs;
 
-public class Bullet : MonoBehaviour
+namespace Player
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Bullet : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] private Rigidbody _rb;
+        [SerializeField] private BulletSO _bulletSO;
+        private void Start()
+        {
+            _rb.AddForce(_rb.transform.forward * _bulletSO.Speed);
+        }
     }
 }
+

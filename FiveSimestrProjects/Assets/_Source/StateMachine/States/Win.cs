@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MVC;
 
-public class Win : MonoBehaviour
+namespace StateMach
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Win : MainGameState
     {
-        
+        public Win(StateMachine admin) : base(admin)
+        {
+
+        }
+        public override void Enter()
+        {
+            Debug.Log("win");
+            Score.OnWin?.Invoke();
+            Score.OnExpose.Invoke();
+            Time.timeScale = 0;
+            _admin.Expose();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

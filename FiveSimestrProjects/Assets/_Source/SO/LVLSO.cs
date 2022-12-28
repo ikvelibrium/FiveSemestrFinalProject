@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LVLSO : MonoBehaviour
+namespace SOs
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName = "LVLSO", menuName = "ScriptableObjects/LVLSO", order = 1)]
+    public class LVLSO : ScriptableObject
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public List<TowerInfo> Pancakes;
+        public GameObject WallPref;
     }
 }
+

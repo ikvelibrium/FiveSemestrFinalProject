@@ -2,17 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootInput : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+namespace Player
+{
+    public class ShootInput : MonoBehaviour
     {
-        
+        private Shoot _shoot;
+        private float _reloadTime;
+ 
+
+        public void Initialize(Shoot shoot)
+        {
+            _shoot = shoot;
+        }
+       
+        public void Update()
+        {
+            
+            if (Input.GetKeyDown(KeyCode.Space) && _reloadTime < 0)
+            {
+                _shoot.Shooting();
+               
+            }
+           
+            _reloadTime -= Time.deltaTime;
+            
+          
+        }
+        public void SetReloadTime(float kd)
+        {
+              
+            _reloadTime = kd;
+        }
     }
 }
+

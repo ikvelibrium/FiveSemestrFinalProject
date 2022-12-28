@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Game : MonoBehaviour
+namespace StateMach
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Game : MainGameState
     {
-        
-    }
+        public Game(StateMachine admin) : base(admin)
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+        public override void Enter()
+        {
+            Time.timeScale = 1;
+
+        }
+        public override void Exit()
+        {
+           Time.timeScale = 0;
+        }
     }
 }
+

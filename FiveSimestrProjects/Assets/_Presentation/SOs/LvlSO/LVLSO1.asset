@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64655708dc6ee7f4fb2c9f5bf6aa0219, type: 3}
+  m_Name: LVLSO1
+  m_EditorClassIdentifier: 
+  Pancakes:
+  - PancakeSO: {fileID: 11400000, guid: 6f4456e8e98b44046a81c473a157365f, type: 2}
+    amountOfFloars: 5
+  - PancakeSO: {fileID: 11400000, guid: 9e6dea312ab87c74c90161b2f8d4c93d, type: 2}
+    amountOfFloars: 7
+  - PancakeSO: {fileID: 11400000, guid: 1f234641e000761419b92c6afa9237c3, type: 2}
+    amountOfFloars: 8
+  WallPref: {fileID: 3425228606888375028, guid: 133fde6d7df192d4bbea09213b0aae9c, type: 3}

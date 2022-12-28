@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MVC;
 
-public class Lose : MonoBehaviour
+namespace StateMach
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Lose : MainGameState
     {
-        
-    }
+        ScoreLoad _scoreLoad;
+        public Lose(StateMachine admin) : base(admin)
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
+
+        public override void Enter()
+        {
+            Debug.Log("Loose");
+
+            Time.timeScale = 0;
+            Score.OnLose?.Invoke();
+            Score.OnExpose?.Invoke();
+            
+            _admin.Expose();
+        }
     }
 }

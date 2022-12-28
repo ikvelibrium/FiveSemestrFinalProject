@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateInitializer : MonoBehaviour
+namespace StateMach
 {
-    // Start is called before the first frame update
-    void Start()
+    public class StateInitializer 
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public StateInitializer(StateMachine stateMachine)
+        {
+            stateMachine.States.Add(typeof(Game), new Game(stateMachine));
+            stateMachine.States.Add(typeof(Lose), new Lose(stateMachine));
+            stateMachine.States.Add(typeof(Win), new Win(stateMachine));
+            
+        }
     }
 }
+

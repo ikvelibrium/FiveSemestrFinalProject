@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7997861b6901364d9cab070c8ff94f1, type: 3}
+  m_Name: PancakeSO3
+  m_EditorClassIdentifier: 
+  PancakePref: {fileID: 2918122178413689162, guid: 5ae00a86110719649b7e7032f3e9783a, type: 3}
+  ScoreCost: 50

@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletSO : MonoBehaviour
+namespace SOs
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName = "BulletSO", menuName = "ScriptableObjects/BulletSO", order = 1)]
+    public class BulletSO : ScriptableObject
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField] public float Speed;
+        public GameObject bulletPref;
     }
 }
+
